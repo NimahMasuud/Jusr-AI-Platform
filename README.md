@@ -1,4 +1,4 @@
-# Jusr AI Prototype (v6)
+# Jusr AI Prototype
 
 Jusr AI is a prototype built to the Jusr AI Developer Guide (Part 1: scope, roles and the case state machine; Part 2: requirements R-01 to R-74 and acceptance tests). It has three parts: a FastAPI backend (SQLAlchemy 2, Alembic, PostgreSQL), a React + TypeScript + Vite frontend, and a separate suggest-only AI helper service (Nimah). **All data is simulated**: every patient, result and clinician is synthetic and no real EMR is connected.
 
