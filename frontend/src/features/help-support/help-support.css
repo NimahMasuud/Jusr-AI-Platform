@@ -1,0 +1,341 @@
+.help-support-page {
+  padding-bottom: 40px;
+}
+
+.help-support-eyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #179FA2;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.help-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 28px;
+  padding: 36px;
+  border-radius: 16px;
+  background: #112952;
+  color: #ffffff;
+}
+
+.help-welcome > div > span {
+  color: #97D5D3;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.help-welcome h2 {
+  margin: 12px 0 8px;
+  font-size: 26px;
+}
+
+.help-welcome p {
+  max-width: 520px;
+  margin: 0;
+  color: #D0D5DD;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.help-welcome > svg {
+  flex-shrink: 0;
+  color: #97D5D3;
+}
+
+.help-search-section {
+  margin: 24px 0;
+}
+
+.help-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 620px;
+  padding: 0 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #64748b;
+}
+
+.help-search input {
+  width: 100%;
+  min-width: 0;
+  height: 48px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #172033;
+  font-size: 13px;
+}
+
+.help-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.help-resource-card {
+  padding: 24px;
+  border: 1px solid #e8edf2;
+  border-radius: 13px;
+  background: #ffffff;
+}
+
+.help-resource-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #E6F5F4;
+  color: #179FA2;
+}
+
+.help-resource-card h3 {
+  margin: 18px 0 8px;
+  color: #172033;
+  font-size: 16px;
+}
+
+.help-resource-card p {
+  min-height: 44px;
+  margin: 0 0 18px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.help-resource-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #12888B;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.help-contact-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid #e8edf2;
+  border-radius: 13px;
+  background: #ffffff;
+}
+
+.help-contact-panel h2 {
+  margin: 0 0 8px;
+  color: #172033;
+  font-size: 17px;
+}
+
+.help-contact-panel p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.help-contact-note {
+  color: #64748b;
+  font-size: 12px;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .help-welcome {
+    padding: 24px;
+  }
+
+  .help-welcome h2 {
+    font-size: 21px;
+  }
+
+  .help-welcome > svg {
+    width: 42px;
+    height: 42px;
+  }
+
+  .help-resource-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .help-resource-card p {
+    min-height: 0;
+  }
+
+  .help-contact-panel {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .help-contact-note {
+    text-align: left;
+  }
+}
+
+/* Jusr AI branded welcome banner */
+.help-welcome {
+  background: #E6F5F4;
+  border: 1px solid #CFE9E7;
+  color: #142b50;
+}
+
+.help-welcome > div > span {
+  color: #179FA2;
+}
+
+.help-welcome h2 {
+  color: #142b50;
+}
+
+.help-welcome p {
+  color: #526783;
+}
+
+.help-welcome > svg {
+  color: #179FA2;
+}
+
+.help-faq-section {
+  margin: 28px 0;
+}
+
+.help-faq-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.help-faq-heading h2 {
+  margin: 5px 0 7px;
+  color: #142b50;
+  font-size: 20px;
+}
+
+.help-faq-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.help-faq-count {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #E6F5F4;
+  color: #12888B;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.help-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.help-faq-item {
+  overflow: hidden;
+  border: 1px solid #e8edf2;
+  border-radius: 11px;
+  background: #ffffff;
+}
+
+.help-faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 17px 20px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.help-faq-question > span {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.help-faq-question small {
+  color: #179FA2;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.help-faq-question strong {
+  color: #142b50;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.help-faq-chevron {
+  flex-shrink: 0;
+  color: #64748b;
+  transition: transform 0.2s ease;
+}
+
+.help-faq-chevron.expanded {
+  transform: rotate(90deg);
+  color: #179FA2;
+}
+
+.help-faq-answer {
+  padding: 0 20px 18px;
+  color: #526783;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.help-faq-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 30px;
+  border: 1px dashed #dbe3ec;
+  border-radius: 11px;
+  color: #64748b;
+  text-align: center;
+}
+
+.help-faq-empty strong {
+  color: #142b50;
+  font-size: 14px;
+}
+
+.help-faq-empty p {
+  margin: 0;
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  .help-faq-heading {
+    align-items: flex-start;
+  }
+
+  .help-faq-question {
+    padding: 15px;
+  }
+
+  .help-faq-answer {
+    padding: 0 15px 16px;
+  }
+}

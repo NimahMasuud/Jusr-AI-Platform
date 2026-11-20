@@ -1,0 +1,610 @@
+{
+  "status": "DRAFT_MOCK",
+  "source": "Mock list of 7 Nov 2026 (Kafilat), Urgency rules sheet",
+  "note": "MOCK THRESHOLDS FOR THE DEMO. Not verified against Abu Dhabi medical standards. The lab's own range and critical flags on the result always win. The end users decide what is normal and supply the real standards. The system only suggests; a clinician sets the urgency. Where a value falls between two listed bands the helper makes no suggestion and asks for a clinician.",
+  "suggestionValues": [
+    "urgent",
+    "clinician_decides",
+    "routine",
+    "no_suggestion"
+  ],
+  "ambiguousNames": {
+    "full blood count - haem": "The sub-test is not named (haemoglobin, platelets and so on), so no rule can be chosen.",
+    "liver function test - chm": "The sub-test is not named (albumin, enzymes and so on), so no rule can be chosen."
+  },
+  "tests": [
+    {
+      "id": "PCV",
+      "names": [
+        "pcv - haem",
+        "pcv",
+        "packed cell volume",
+        "haematocrit",
+        "hematocrit"
+      ],
+      "kind": "numeric",
+      "baseUnit": "%",
+      "unitFactors": {
+        "%": 1
+      },
+      "normalRange": [
+        37,
+        54
+      ],
+      "referenceText": "37 - 54 %",
+      "bands": [
+        {
+          "id": "PCV-1",
+          "when": {
+            "lte": 22
+          },
+          "suggestion": "urgent",
+          "reason": "About haemoglobin 7 g/dL or lower: severe anaemia needing same-day review and a transfusion decision",
+          "specialty": "General medicine (same day), then Haematology",
+          "lookFor": "Chest pain, breathlessness, fainting, bleeding, black stools, pregnancy, a child"
+        },
+        {
+          "id": "PCV-2",
+          "when": {
+            "gt": 22,
+            "lt": 30
+          },
+          "suggestion": "clinician_decides",
+          "reason": "Moderate anaemia. Urgent only with symptoms, pregnancy or a child",
+          "specialty": "Haematology or General medicine",
+          "lookFor": "Chest pain, breathlessness, fainting, bleeding, black stools, pregnancy, a child"
+        },
+        {
+          "id": "PCV-3",
+          "when": {
+            "gte": 30,
+            "lt": 37
+          },
+          "suggestion": "routine",
+          "reason": "Mild anaemia. Not urgent on its own",
+          "specialty": "Primary care; Obstetrics if pregnant",
+          "lookFor": "Pregnancy (route to antenatal care), recent bleeding, poor diet"
+        },
+        {
+          "id": "PCV-4",
+          "when": {
+            "gt": 54
+          },
+          "suggestion": "clinician_decides",
+          "reason": "Raised red cell volume; urgent only with symptoms such as headache, vision change or chest pain",
+          "specialty": "Haematology or General medicine",
+          "lookFor": "Symptoms, smoking, dehydration"
+        }
+      ]
+    },
+    {
+      "id": "HBSAG",
+      "names": [
+        "hbsag - haem",
+        "hbsag",
+        "hepatitis b surface antigen"
+      ],
+      "kind": "qualitative",
+      "bands": [
+        {
+          "id": "HBSAG-NEG",
+          "when": {
+            "text": [
+              "negative",
+              "neg"
+            ]
+          },
+          "suggestion": "no_suggestion",
+          "reason": "Negative. Nothing to act on",
+          "specialty": "None",
+          "lookFor": "Pregnancy (for the record only)"
+        },
+        {
+          "id": "HBSAG-POS",
+          "when": {
+            "text": [
+              "positive",
+              "pos",
+              "reactive"
+            ]
+          },
+          "suggestion": "clinician_decides",
+          "reason": "Time-sensitive (not emergency) if pregnant, jaundiced or liver tests are abnormal",
+          "specialty": "Infectious diseases or Hepatology",
+          "lookFor": "Pregnancy, jaundice, liver test results"
+        }
+      ]
+    },
+    {
+      "id": "HIV",
+      "names": [
+        "hiv - chm",
+        "hiv",
+        "hiv antigen and antibody"
+      ],
+      "kind": "qualitative",
+      "bands": [
+        {
+          "id": "HIV-NEG",
+          "when": {
+            "text": [
+              "negative",
+              "neg"
+            ]
+          },
+          "suggestion": "no_suggestion",
+          "reason": "Negative. Nothing to act on",
+          "specialty": "None",
+          "lookFor": "None"
+        },
+        {
+          "id": "HIV-POS",
+          "when": {
+            "text": [
+              "positive",
+              "pos",
+              "reactive"
+            ]
+          },
+          "suggestion": "clinician_decides",
+          "reason": "Confirmatory testing and counselling needed; time-sensitive if pregnant or acutely ill. Extra confidentiality in all messages",
+          "specialty": "Infectious diseases",
+          "lookFor": "Pregnancy, acute illness",
+          "confidential": true
+        }
+      ]
+    },
+    {
+      "id": "ALBUMIN",
+      "names": [
+        "albumin",
+        "liver function test - chm (albumin)"
+      ],
+      "kind": "numeric",
+      "baseUnit": "g/dL",
+      "unitFactors": {
+        "g/dl": 1
+      },
+      "normalRange": [
+        3.5,
+        5
+      ],
+      "referenceText": "3.5 - 5 g/dL",
+      "bands": [
+        {
+          "id": "ALB-1",
+          "when": {
+            "lt": 2.5
+          },
+          "suggestion": "clinician_decides",
+          "reason": "Severely low; urgent with swelling, jaundice or known liver or kidney disease",
+          "specialty": "Hepatology or General medicine",
+          "lookFor": "Swelling, jaundice, abdominal swelling"
+        },
+        {
+          "id": "ALB-2",
+          "when": {
+            "gte": 2.5,
+            "lt": 3.5
+          },
+          "suggestion": "routine",
+          "reason": "Mildly to moderately low",
+          "specialty": "Primary care or General medicine",
+          "lookFor": "Poor nutrition, liver or kidney disease"
+        }
+      ]
+    },
+    {
+      "id": "AST_ALT",
+      "names": [
+        "alt",
+        "ast",
+        "alt/ast",
+        "ast/alt",
+        "alanine aminotransferase",
+        "aspartate aminotransferase",
+        "liver function test - chm (enzymes)"
+      ],
+      "kind": "ratio_to_uln",
+      "bands": [
+        {
+          "id": "LFT-1",
+          "when": {
+            "ratioGt": 5
+          },
+          "suggestion": "urgent",
+          "reason": "Possible acute liver injury (above 5 times the upper limit of normal). Uses the lab's own upper limit",
+          "specialty": "Hepatology or Gastroenterology",
+          "lookFor": "Jaundice, confusion, bleeding, abdominal pain"
+        },
+        {
+          "id": "LFT-2",
+          "when": {
+            "ratioGt": 1,
+            "ratioLte": 5
+          },
+          "suggestion": "routine",
+          "reason": "Mildly raised. Repeat and look for the cause",
+          "specialty": "Hepatology or Primary care",
+          "lookFor": "Alcohol, medicines, viral hepatitis risk"
+        }
+      ]
+    },
+    {
+      "id": "HB",
+      "names": [
+        "haemoglobin",
+        "hemoglobin",
+        "hb",
+        "hgb"
+      ],
+      "kind": "numeric",
+      "baseUnit": "g/dL",
+      "unitFactors": {
+        "g/dl": 1
+      },
+      "normalRange": [
+        12,
+        16
+      ],
+      "referenceText": "12 - 16 g/dL",
+      "bands": [
+        {
+          "id": "HB-1",
+          "when": {
+            "lt": 7
+          },
+          "suggestion": "urgent",
+          "reason": "Severe anaemia (same rule as PCV 22 % or below)",
+          "specialty": "General medicine (same day), then Haematology",
+          "lookFor": "Chest pain, breathlessness, fainting, bleeding, pregnancy"
+        },
+        {
+          "id": "HB-2",
+          "when": {
+            "gte": 7,
+            "lt": 10
+          },
+          "suggestion": "clinician_decides",
+          "reason": "Moderate anaemia",
+          "specialty": "Haematology or General medicine",
+          "lookFor": "Chest pain, breathlessness, fainting, bleeding, pregnancy"
+        },
+        {
+          "id": "HB-3",
+          "when": {
+            "gte": 10,
+            "lt": 12
+          },
+          "suggestion": "routine",
+          "reason": "Mild anaemia",
+          "specialty": "Primary care; Obstetrics if pregnant",
+          "lookFor": "Pregnancy"
+        }
+      ]
+    },
+    {
+      "id": "PLT",
+      "names": [
+        "platelet count",
+        "platelets",
+        "plt"
+      ],
+      "kind": "numeric",
+      "baseUnit": "x10^9/L",
+      "unitFactors": {
+        "x10^9/l": 1,
+        "10^9/l": 1,
+        "/mm3": 0.001,
+        "/cmm": 0.001,
+        "/ul": 0.001,
+        "k/ul": 1
+      },
+      "normalRange": [
+        150,
+        400
+      ],
+      "referenceText": "150 - 400 x10^9/L (the listing's range looks truncated)",
+      "bands": [
+        {
+          "id": "PLT-1",
+          "when": {
+            "lt": 50
+          },
+          "suggestion": "urgent",
+          "reason": "Bleeding risk (below 50 x10^9/L, or any low count with bleeding)",
+          "specialty": "Haematology",
+          "lookFor": "Nosebleeds, bruising, bleeding gums, black stools, fever"
+        },
+        {
+          "id": "PLT-2",
+          "when": {
+            "gte": 50,
+            "lt": 150
+          },
+          "suggestion": "clinician_decides",
+          "reason": "Mildly to moderately low",
+          "specialty": "Haematology or Primary care",
+          "lookFor": "Pregnancy, medicines, recent infection"
+        },
+        {
+          "id": "PLT-3",
+          "when": {
+            "gt": 1000
+          },
+          "suggestion": "clinician_decides",
+          "reason": "Very high; clot or bleeding risk",
+          "specialty": "Haematology",
+          "lookFor": "Symptoms of clotting, headache"
+        }
+      ]
+    },
+    {
+      "id": "ANC",
+      "names": [
+        "absolute neutrophil count",
+        "anc"
+      ],
+      "kind": "numeric",
+      "baseUnit": "/mm3",
+      "unitFactors": {
+        "/mm3": 1,
+        "/cmm": 1,
+        "/ul": 1,
+        "x10^9/l": 1000,
+        "10^9/l": 1000
+      },
+      "normalRange": [
+        1600,
+        7000
+      ],
+      "referenceText": "1600 - 7000 /mm3",
+      "bands": [
+        {
+          "id": "ANC-1",
+          "when": {
+            "lt": 500
+          },
+          "suggestion": "urgent",
+          "reason": "Severe neutropenia carries a high infection risk (below 500 /mm3, especially with fever)",
+          "specialty": "Haematology or General medicine",
+          "lookFor": "Fever, chemotherapy, recent illness"
+        },
+        {
+          "id": "ANC-2",
+          "when": {
+            "gte": 500,
+            "lt": 1600
+          },
+          "suggestion": "clinician_decides",
+          "reason": "Mild to moderate neutropenia",
+          "specialty": "Haematology or Primary care",
+          "lookFor": "Fever, medicines"
+        }
+      ]
+    },
+    {
+      "id": "MCV",
+      "names": [
+        "mcv",
+        "mean cell volume"
+      ],
+      "kind": "numeric",
+      "baseUnit": "fL",
+      "unitFactors": {
+        "fl": 1
+      },
+      "normalRange": [
+        76,
+        96
+      ],
+      "referenceText": "76 - 96 fL",
+      "bands": [
+        {
+          "id": "MCV-1",
+          "when": {
+            "lt": 76
+          },
+          "suggestion": "routine",
+          "reason": "Not urgent on its own; helps find the cause of anaemia",
+          "specialty": "Haematology or Primary care",
+          "lookFor": "Anaemia, diet, family history"
+        },
+        {
+          "id": "MCV-2",
+          "when": {
+            "gt": 96
+          },
+          "suggestion": "routine",
+          "reason": "Not urgent on its own; helps find the cause of anaemia",
+          "specialty": "Haematology or Primary care",
+          "lookFor": "Anaemia, diet, family history"
+        }
+      ]
+    },
+    {
+      "id": "MCHC",
+      "names": [
+        "mchc"
+      ],
+      "kind": "numeric",
+      "baseUnit": "%",
+      "unitFactors": {
+        "%": 1
+      },
+      "normalRange": [
+        32,
+        36
+      ],
+      "referenceText": "32 - 36 %",
+      "bands": [
+        {
+          "id": "MCHC-1",
+          "when": {
+            "lt": 32
+          },
+          "suggestion": "routine",
+          "reason": "Not urgent on its own",
+          "specialty": "Primary care",
+          "lookFor": "Anaemia"
+        }
+      ]
+    },
+    {
+      "id": "NEUT",
+      "names": [
+        "neutrophils %",
+        "neutrophils"
+      ],
+      "kind": "numeric",
+      "baseUnit": "%",
+      "unitFactors": {
+        "%": 1
+      },
+      "normalRange": [
+        40,
+        70
+      ],
+      "referenceText": "40 - 70 %",
+      "bands": [
+        {
+          "id": "NEUT-1",
+          "when": {
+            "lt": 40
+          },
+          "suggestion": "routine",
+          "reason": "Percentages alone are not urgent. Judge them with the total white cell count",
+          "specialty": "Primary care or Haematology if it persists",
+          "lookFor": "Fever, infection, allergy, parasites"
+        },
+        {
+          "id": "NEUT-2",
+          "when": {
+            "gt": 70
+          },
+          "suggestion": "routine",
+          "reason": "Percentages alone are not urgent. Judge them with the total white cell count",
+          "specialty": "Primary care or Haematology if it persists",
+          "lookFor": "Fever, infection, allergy, parasites"
+        }
+      ]
+    },
+    {
+      "id": "LYMPH",
+      "names": [
+        "lymphocytes %",
+        "lymphocytes"
+      ],
+      "kind": "numeric",
+      "baseUnit": "%",
+      "unitFactors": {
+        "%": 1
+      },
+      "normalRange": [
+        20,
+        50
+      ],
+      "referenceText": "20 - 50 %",
+      "bands": [
+        {
+          "id": "LYMPH-1",
+          "when": {
+            "lt": 20
+          },
+          "suggestion": "routine",
+          "reason": "Percentages alone are not urgent. Judge them with the total white cell count",
+          "specialty": "Primary care or Haematology if it persists",
+          "lookFor": "Fever, infection, allergy, parasites"
+        },
+        {
+          "id": "LYMPH-2",
+          "when": {
+            "gt": 50
+          },
+          "suggestion": "routine",
+          "reason": "Percentages alone are not urgent. Judge them with the total white cell count",
+          "specialty": "Primary care or Haematology if it persists",
+          "lookFor": "Fever, infection, allergy, parasites"
+        }
+      ]
+    },
+    {
+      "id": "MONO",
+      "names": [
+        "monocytes %",
+        "monocytes"
+      ],
+      "kind": "numeric",
+      "baseUnit": "%",
+      "unitFactors": {
+        "%": 1
+      },
+      "normalRange": [
+        1,
+        8
+      ],
+      "referenceText": "1 - 8 %",
+      "bands": [
+        {
+          "id": "MONO-1",
+          "when": {
+            "lt": 1
+          },
+          "suggestion": "routine",
+          "reason": "Percentages alone are not urgent. Judge them with the total white cell count",
+          "specialty": "Primary care or Haematology if it persists",
+          "lookFor": "Fever, infection, allergy, parasites"
+        },
+        {
+          "id": "MONO-2",
+          "when": {
+            "gt": 8
+          },
+          "suggestion": "routine",
+          "reason": "Percentages alone are not urgent. Judge them with the total white cell count",
+          "specialty": "Primary care or Haematology if it persists",
+          "lookFor": "Fever, infection, allergy, parasites"
+        }
+      ]
+    },
+    {
+      "id": "EOS",
+      "names": [
+        "eosinophils %",
+        "eosinophils"
+      ],
+      "kind": "numeric",
+      "baseUnit": "%",
+      "unitFactors": {
+        "%": 1
+      },
+      "normalRange": [
+        2,
+        10
+      ],
+      "referenceText": "2 - 10 %",
+      "bands": [
+        {
+          "id": "EOS-1",
+          "when": {
+            "lt": 2
+          },
+          "suggestion": "routine",
+          "reason": "Percentages alone are not urgent. Judge them with the total white cell count",
+          "specialty": "Primary care or Haematology if it persists",
+          "lookFor": "Fever, infection, allergy, parasites"
+        },
+        {
+          "id": "EOS-2",
+          "when": {
+            "gt": 10
+          },
+          "suggestion": "routine",
+          "reason": "Percentages alone are not urgent. Judge them with the total white cell count",
+          "specialty": "Primary care or Haematology if it persists",
+          "lookFor": "Fever, infection, allergy, parasites"
+        }
+      ]
+    }
+  ]
+}

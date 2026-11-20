@@ -1,0 +1,11 @@
+SIMULATED DOCUMENT. NOT A REAL PATIENT.
+
+Patient ref: SIM-0001
+Facility: Facility A
+Date: 2026-11-02
+Test: PCV - HAEM
+Result: 22
+Ordering clinician: STAFF-014
+Specialty needed: Haematology
+
+Note: please arrange follow-up.

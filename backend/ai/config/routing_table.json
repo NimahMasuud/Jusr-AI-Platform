@@ -1,0 +1,170 @@
+{
+  "status": "DRAFT_MOCK",
+  "source": "Mock list of 7 Nov 2026 (Kafilat), Routing (mock) sheet",
+  "note": "Facility names are MOCK labels for the demo (Facility A is the origin hospital with the laboratory). Time to accept is a placeholder. Replace with real facilities when the system is rolled out.",
+  "rows": [
+    {
+      "specialty": "General medicine",
+      "aliases": [
+        "general medicine",
+        "general medicine (same day)"
+      ],
+      "service": "Medical outpatients and on-call medicine",
+      "primary": {
+        "facilityCode": "Facility A",
+        "text": "Facility A (origin hospital): medical outpatient clinic"
+      },
+      "backup": {
+        "facilityCode": "Facility C",
+        "text": "Facility C (mock public hospital): medical outpatient clinic"
+      },
+      "urgentRecipient": "Facility A medical on-call pool",
+      "urgentRole": "On-call doctor for medicine, with a named backup",
+      "timeToAcceptUrgent": "2 hours",
+      "appliesTo": "Severe anaemia, same-day review"
+    },
+    {
+      "specialty": "Haematology",
+      "aliases": [
+        "haematology",
+        "hematology"
+      ],
+      "service": "Haematology clinic and day unit",
+      "primary": {
+        "facilityCode": "Facility C",
+        "text": "Facility C (mock public hospital): haematology clinic"
+      },
+      "backup": {
+        "facilityCode": "Facility D",
+        "text": "Facility D (mock specialist centre): haematology clinic"
+      },
+      "urgentRecipient": "Facility C haematology on-call pool",
+      "urgentRole": "On-call haematology consultant or clinic lead",
+      "timeToAcceptUrgent": "2 hours",
+      "appliesTo": "Anaemia after the same-day review; very low platelets or neutrophils"
+    },
+    {
+      "specialty": "Obstetrics (antenatal care)",
+      "aliases": [
+        "obstetrics",
+        "obstetrics (antenatal care)",
+        "antenatal care"
+      ],
+      "service": "Antenatal clinic",
+      "primary": {
+        "facilityCode": "Facility C",
+        "text": "Facility C (mock public hospital): antenatal clinic"
+      },
+      "backup": {
+        "facilityCode": "Facility A",
+        "text": "Facility A: antenatal clinic"
+      },
+      "urgentRecipient": "Facility C obstetric on-call pool",
+      "urgentRole": "On-call obstetrician",
+      "timeToAcceptUrgent": "2 hours",
+      "appliesTo": "Anaemia in a pregnant patient (pregnancy status is not in the listing)"
+    },
+    {
+      "specialty": "Hepatology or Gastroenterology",
+      "aliases": [
+        "hepatology",
+        "gastroenterology",
+        "hepatology or gastroenterology"
+      ],
+      "service": "Liver and GI clinic",
+      "primary": {
+        "facilityCode": "Facility D",
+        "text": "Facility D (mock specialist centre): liver clinic"
+      },
+      "backup": {
+        "facilityCode": "Facility C",
+        "text": "Facility C: GI clinic"
+      },
+      "urgentRecipient": "Facility D GI on-call pool",
+      "urgentRole": "On-call gastroenterology consultant",
+      "timeToAcceptUrgent": "2 hours",
+      "appliesTo": "Abnormal liver tests; positive hepatitis B result"
+    },
+    {
+      "specialty": "Infectious diseases",
+      "aliases": [
+        "infectious diseases",
+        "infectious disease"
+      ],
+      "service": "ID and HIV clinic (confidential)",
+      "primary": {
+        "facilityCode": "Facility C",
+        "text": "Facility C (mock public hospital): ID clinic"
+      },
+      "backup": {
+        "facilityCode": "Facility D",
+        "text": "Facility D: ID clinic"
+      },
+      "urgentRecipient": "Facility C ID on-call pool",
+      "urgentRole": "On-call ID physician",
+      "timeToAcceptUrgent": "2 hours",
+      "appliesTo": "Positive hepatitis B or HIV result"
+    },
+    {
+      "specialty": "Primary care",
+      "aliases": [
+        "primary care",
+        "family medicine"
+      ],
+      "service": "Family medicine follow-up",
+      "primary": {
+        "facilityCode": "Facility B",
+        "text": "Facility B (mock primary care clinic)"
+      },
+      "backup": {
+        "facilityCode": "Facility A",
+        "text": "Facility A: general outpatients"
+      },
+      "urgentRecipient": "Facility B nurse navigator",
+      "urgentRole": "Nurse navigator, escalating to a doctor",
+      "timeToAcceptUrgent": "1 working day",
+      "appliesTo": "Mild anaemia and routine follow-up"
+    },
+    {
+      "specialty": "Colposcopy",
+      "aliases": [
+        "colposcopy",
+        "cervical screening",
+        "cervical"
+      ],
+      "service": "Colposcopy clinic (cervical screening follow-up)",
+      "primary": {
+        "facilityCode": "Facility B",
+        "text": "Facility B (regional referral hospital): colposcopy clinic"
+      },
+      "backup": {
+        "facilityCode": "Facility A",
+        "text": "Facility A (health centre): cervical screening review"
+      },
+      "urgentRecipient": "Facility B colposcopy on-call clinician",
+      "urgentRole": "Receiving colposcopist, with a named specialty backup",
+      "timeToAcceptUrgent": "2 hours",
+      "appliesTo": "Abnormal cervical screening result needing specialist review"
+    },
+    {
+      "specialty": "Oncology",
+      "aliases": [
+        "oncology",
+        "cancer care"
+      ],
+      "service": "Gynae-oncology clinic",
+      "primary": {
+        "facilityCode": "Facility B",
+        "text": "Facility B (regional referral hospital): gynae-oncology clinic"
+      },
+      "backup": {
+        "facilityCode": "Facility C",
+        "text": "Facility C (mock specialist centre): gynae-oncology clinic"
+      },
+      "urgentRecipient": "Facility B gynae-oncology on-call pool",
+      "urgentRole": "On-call gynae-oncologist",
+      "timeToAcceptUrgent": "2 hours",
+      "appliesTo": "Suspected or confirmed cervical malignancy"
+    }
+  ]
+}

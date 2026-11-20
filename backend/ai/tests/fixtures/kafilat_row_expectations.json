@@ -1,0 +1,288 @@
+{
+ "_note": "Expected suggestions from Kafilat's 'Row by row' sheet (mock list, 7 Nov 2026). Values only, no identifiers.",
+ "rows": [
+  {
+   "test": "PCV - HAEM",
+   "value": 21,
+   "expected": "urgent"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 21,
+   "expected": "urgent"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 22,
+   "expected": "urgent"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 26,
+   "expected": "clinician_decides"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 26,
+   "expected": "clinician_decides"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 26,
+   "expected": "clinician_decides"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 31,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 32,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 33,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 33,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 33,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 33,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 33,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 33,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 33,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 33,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 34,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 34,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 34,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 34,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 34,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 35,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 35,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 35,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 35,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 36,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 36,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 36,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 36,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 36,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 36,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 36,
+   "expected": "routine"
+  },
+  {
+   "test": "PCV - HAEM",
+   "value": 36,
+   "expected": "routine"
+  },
+  {
+   "test": "HBSAG - HAEM",
+   "text": "0 Negative",
+   "expected": "no_suggestion"
+  },
+  {
+   "test": "HBSAG - HAEM",
+   "text": "0 Negative",
+   "expected": "no_suggestion"
+  },
+  {
+   "test": "HBSAG - HAEM",
+   "text": "0 Negative",
+   "expected": "no_suggestion"
+  },
+  {
+   "test": "HBSAG - HAEM",
+   "text": "0 Negative",
+   "expected": "no_suggestion"
+  },
+  {
+   "test": "HBSAG - HAEM",
+   "text": "0 Negative",
+   "expected": "no_suggestion"
+  },
+  {
+   "test": "HBSAG - HAEM",
+   "text": "0 Negative",
+   "expected": "no_suggestion"
+  },
+  {
+   "test": "HBSAG - HAEM",
+   "text": "0 Negative",
+   "expected": "no_suggestion"
+  },
+  {
+   "test": "HBSAG - HAEM",
+   "text": "0 Negative",
+   "expected": "no_suggestion"
+  },
+  {
+   "test": "HBSAG - HAEM",
+   "text": "0 Negative",
+   "expected": "no_suggestion"
+  },
+  {
+   "test": "HBSAG - HAEM",
+   "text": "0 Negative",
+   "expected": "no_suggestion"
+  },
+  {
+   "test": "HBSAG - HAEM",
+   "text": "0 Negative",
+   "expected": "no_suggestion"
+  },
+  {
+   "test": "HIV - CHM",
+   "text": "0 Negative",
+   "expected": "no_suggestion"
+  },
+  {
+   "test": "HIV - CHM",
+   "text": "0 Negative",
+   "expected": "no_suggestion"
+  },
+  {
+   "test": "HIV - CHM",
+   "text": "0 Negative",
+   "expected": "no_suggestion"
+  },
+  {
+   "test": "FULL BLOOD COUNT - HAEM",
+   "expected": "not_evaluated"
+  },
+  {
+   "test": "FULL BLOOD COUNT - HAEM",
+   "expected": "not_evaluated"
+  },
+  {
+   "test": "FULL BLOOD COUNT - HAEM",
+   "expected": "not_evaluated"
+  },
+  {
+   "test": "FULL BLOOD COUNT - HAEM",
+   "expected": "not_evaluated"
+  },
+  {
+   "test": "FULL BLOOD COUNT - HAEM",
+   "expected": "not_evaluated"
+  },
+  {
+   "test": "FULL BLOOD COUNT - HAEM",
+   "expected": "not_evaluated"
+  },
+  {
+   "test": "FULL BLOOD COUNT - HAEM",
+   "expected": "not_evaluated"
+  },
+  {
+   "test": "FULL BLOOD COUNT - HAEM",
+   "expected": "not_evaluated"
+  },
+  {
+   "test": "FULL BLOOD COUNT - HAEM",
+   "expected": "not_evaluated"
+  },
+  {
+   "test": "LIVER FUNCTION TEST - CHM",
+   "expected": "not_evaluated"
+  },
+  {
+   "test": "LIVER FUNCTION TEST - CHM",
+   "expected": "not_evaluated"
+  },
+  {
+   "test": "LIVER FUNCTION TEST - CHM",
+   "expected": "not_evaluated"
+  }
+ ]
+}

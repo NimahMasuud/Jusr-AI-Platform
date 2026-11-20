@@ -1,0 +1,281 @@
+
+/* =========================================
+   PATIENT LINK ACCESS STATES
+========================================= */
+
+.patient-link-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #F5F7FA;
+  color: #112952;
+}
+
+.patient-link-header {
+  min-height: 68px;
+  padding: 10px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E5EAF0;
+}
+
+.patient-link-header img {
+  width: 58px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.patient-link-header span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #008B75;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.patient-link-content {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 20px;
+}
+
+.patient-link-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 38px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(17, 41, 82, 0.04);
+  text-align: center;
+}
+
+.patient-link-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #FFF3E4;
+  color: #B87519;
+}
+
+.patient-link-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: #179FA2;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.patient-link-card h1 {
+  margin-bottom: 12px;
+  color: #112952;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.patient-link-card > p {
+  color: #64748B;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.patient-link-button {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 25px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: none;
+  border-radius: 9px;
+  background: #112952;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.patient-link-button:hover {
+  background: #179FA2;
+}
+
+.patient-link-button:focus-visible {
+  outline: 3px solid rgba(23, 159, 162, 0.3);
+  outline-offset: 3px;
+}
+
+.patient-link-confirmation {
+  margin-top: 24px;
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border: 1px solid #B9E4D1;
+  border-radius: 10px;
+  background: #EAF6F0;
+  color: #087C5B;
+  text-align: left;
+}
+
+.patient-link-confirmation svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.patient-link-confirmation p {
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.patient-link-card .patient-link-help {
+  margin-top: 22px;
+  font-size: 11px;
+}
+
+.patient-link-footer {
+  padding: 18px;
+  background: #FFFFFF;
+  color: #94A3B8;
+  font-size: 10px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .patient-link-header {
+    min-height: 58px;
+    padding: 8px 16px;
+  }
+
+  .patient-link-header img {
+    width: 46px;
+    height: 42px;
+  }
+
+  .patient-link-content {
+    padding: 30px 16px;
+  }
+
+  .patient-link-card {
+    padding: 28px 21px;
+    border-radius: 14px;
+  }
+
+  .patient-link-card h1 {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================================
+   PATIENT IDENTITY VERIFICATION
+========================================= */
+
+.patient-verification-form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-top: 26px;
+  text-align: left;
+}
+
+.patient-verification-form label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #112952;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.patient-verification-form label svg {
+  color: #179FA2;
+}
+
+.patient-verification-form input {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5ED;
+  border-radius: 9px;
+  background: #FFFFFF;
+  color: #112952;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.patient-verification-form input:focus {
+  border-color: #179FA2;
+  box-shadow: 0 0 0 3px rgba(23, 159, 162, 0.12);
+}
+
+.patient-verification-form input::placeholder {
+  color: #94A3B8;
+}
+
+.patient-verification-form input::-webkit-inner-spin-button,
+.patient-verification-form input::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.patient-verification-form input[type="number"] {
+  appearance: textfield;
+}
+
+.patient-verification-form .patient-link-button {
+  margin-top: 5px;
+}
+
+.patient-verification-form .patient-link-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.patient-verification-hint {
+  color: #94A3B8;
+  font-size: 11px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.patient-verification-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #B45309;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.patient-verification-error svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+@media (max-width: 600px) {
+  .patient-verification-form {
+    margin-top: 22px;
+  }
+
+  .patient-verification-form input {
+    min-height: 46px;
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "_note": "From Kafilat's Approvals sheet (mock list, 7 Nov 2026): one name per step. Confirmed in chat on 12 Nov 2026.",
+  "document_read": [
+    "coordinator"
+  ],
+  "message_draft": [
+    "coordinator"
+  ],
+  "urgency": [
+    "referring_clinician"
+  ],
+  "summary": [
+    "referring_clinician"
+  ],
+  "referral_target": [
+    "referring_clinician"
+  ],
+  "_extra": {
+    "document_read": "The clinician re-confirms test name, value and unit when setting urgency.",
+    "message_draft": "The clinical lead approves the message templates once.",
+    "urgency": "The receiving clinician may change it on acceptance. That change is logged.",
+    "summary": "Applies to the referral packet summary. A 'what happened so far' view needs no approval.",
+    "referral_target": "The coordinator confirms after a decline."
+  }
+}

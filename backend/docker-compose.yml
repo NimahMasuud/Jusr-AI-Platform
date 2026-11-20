@@ -1,0 +1,52 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: jusr_ai
+      POSTGRES_USER: jusr
+      POSTGRES_PASSWORD: jusr
+    ports: ["5432:5432"]
+    volumes: [jusr_pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U jusr -d jusr_ai"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  api:
+    build: .
+    environment:
+      DATABASE_URL: postgresql+psycopg://jusr:jusr@db:5432/jusr_ai
+      SECRET_KEY: replace-with-a-long-random-secret
+      DEMO_MODE: "true"
+      SCHEDULER_ENABLED: "false"  # the worker service runs the scheduler
+    ports: ["8000:8000"]
+    depends_on:
+      db:
+        condition: service_healthy
+    command: sh -c "alembic upgrade head && python -m app.seed && uvicorn app.main:app --host 0.0.0.0 --port 8000"
+  worker:
+    build: .
+    environment:
+      DATABASE_URL: postgresql+psycopg://jusr:jusr@db:5432/jusr_ai
+      SECRET_KEY: replace-with-a-long-random-secret
+      DEMO_MODE: "true"
+    depends_on:
+      api:
+        condition: service_started
+    command: python -m app.worker
+  ai:
+    build: ../ai
+    environment:
+      BACKEND_URL: http://api:8000
+      AI_SERVICE_EMAIL: ai@jusr.local
+      AI_SERVICE_PASSWORD: National123!
+      SIMULATED_MODE: "true"
+      DATA_DIR: /data
+    ports: ["8100:8100"]
+    depends_on:
+      api:
+        condition: service_started
+    volumes: [jusr_ai_data:/data]
+volumes:
+  jusr_pgdata:
+  jusr_ai_data:

@@ -1,0 +1,5 @@
+[
+  {"eventId": "E1", "timestamp": "2026-11-02T09:00:00Z", "type": "result_received", "actorStaffId": null, "text": "Result arrived from Example Facility One (simulated)."},
+  {"eventId": "E2", "timestamp": "2026-11-02T10:30:00Z", "type": "marked_actionable", "actorStaffId": "STAFF-014", "text": "Marked actionable, urgency routine."},
+  {"eventId": "E3", "timestamp": "2026-11-03T08:15:00Z", "type": "patient_notified", "actorStaffId": "STAFF-021", "text": "Message approved and sent."}
+]

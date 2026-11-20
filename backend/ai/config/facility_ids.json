@@ -1,0 +1,10 @@
+{
+  "_note": "Routing labels are resolved to real backend facility IDs at submit time: codeAliases maps each mock label to the facility code seeded by this project. Put explicit IDs under \"ids\" only if the backend has no facility lookup.",
+  "ids": {},
+  "codeAliases": {
+    "Facility A": "JUSR-DEMO",
+    "Facility B": "DEMO-RRH",
+    "Facility C": "DEMO-DC",
+    "Facility D": "DEMO-RRH"
+  }
+}

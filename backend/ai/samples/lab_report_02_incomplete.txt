@@ -1,0 +1,5 @@
+SIMULATED DOCUMENT. NOT A REAL PATIENT.
+
+Patient ref: SIM-0002
+Test: PCV - HAEM
+Result: 30

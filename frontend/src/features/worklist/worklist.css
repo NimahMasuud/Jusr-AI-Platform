@@ -1,0 +1,1586 @@
+
+/* =========================================
+   JUSR AI — WORKLIST STYLES
+========================================= */
+
+.worklist-page {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* PAGE HEADING */
+
+.worklist-page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.worklist-eyebrow {
+  display: block;
+  color: var(--color-teal);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  margin-bottom: 6px;
+}
+
+.worklist-page-heading h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.worklist-page-heading p {
+  font-size: 14px;
+}
+
+/* SUMMARY CARDS */
+
+.worklist-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.worklist-stat-card {
+  min-width: 0;
+  padding: 20px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+
+.worklist-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.worklist-stat-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.worklist-stat-value {
+  margin-top: 14px;
+  color: var(--color-text-primary);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.worklist-stat-card p {
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+/* FILTER PANEL */
+
+.worklist-filters {
+  padding: 22px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.worklist-filter-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.worklist-filter-heading h2 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.worklist-filter-heading h2 svg {
+  color: var(--color-teal);
+}
+
+.worklist-filter-heading p {
+  font-size: 12px;
+}
+
+.clear-filters {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  color: var(--color-danger);
+  background: var(--color-danger-bg);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.worklist-filter-controls {
+  display: grid;
+  grid-template-columns: minmax(220px, 2fr) repeat(4, minmax(130px, 1fr));
+  gap: 10px;
+}
+
+.worklist-search {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px;
+  height: 42px;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+}
+
+.worklist-search:focus-within {
+  border-color: var(--color-teal);
+  box-shadow: 0 0 0 3px rgba(23,159,162,0.10);
+}
+
+.worklist-search input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--color-text-primary);
+  font-size: 12px;
+}
+
+.worklist-filter-controls select {
+  width: 100%;
+  min-width: 0;
+  height: 42px;
+  padding: 0 10px;
+  color: var(--color-text-primary);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.worklist-filter-controls select:focus {
+  border-color: var(--color-teal);
+}
+
+
+/* CASE TABLE */
+
+.worklist-table-panel {
+  min-width: 0;
+  overflow: hidden;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.worklist-table-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 22px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.worklist-table-heading h2 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.worklist-table-heading p {
+  font-size: 12px;
+}
+
+.worklist-result-count {
+  padding: 5px 10px;
+  color: var(--color-text-secondary);
+  background: var(--color-background);
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+
+.worklist-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.worklist-table {
+  width: 100%;
+  min-width: 1300px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+/* Column widths */
+.worklist-table th:nth-child(1) { width: 15%; }
+.worklist-table th:nth-child(2) { width: 12%; }
+.worklist-table th:nth-child(3) { width: 12%; }
+.worklist-table th:nth-child(4) { width: 10%; }
+.worklist-table th:nth-child(5) { width: 15%; }
+.worklist-table th:nth-child(6) { width: 14%; }
+.worklist-table th:nth-child(7) { width: 12%; }
+.worklist-table th:nth-child(8) { width: 10%; }
+
+.worklist-table thead {
+  background: #F8FAFC;
+}
+
+.worklist-table th {
+  padding: 14px 12px;
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.worklist-table td {
+  padding: 16px 12px;
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  line-height: 1.5;
+  border-top: 1px solid var(--color-border);
+  vertical-align: middle;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.worklist-table td.worklist-next-action {
+  overflow-wrap: anywhere;
+}
+
+
+.worklist-patient .worklist-short-id {
+  font-family: monospace;
+  white-space: nowrap;
+  cursor: help;
+}
+
+.worklist-screening > strong,
+.worklist-screening > span,
+.worklist-patient > strong,
+.worklist-patient > span {
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+}
+
+.worklist-priority-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 9px;
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.priority-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.worklist-priority-badge.priority-urgent {
+  color: var(--color-danger);
+  background: var(--color-danger-bg);
+}
+
+.worklist-priority-badge.priority-high {
+  color: #946313;
+  background: var(--color-warning-bg);
+}
+
+.worklist-priority-badge.priority-normal {
+  color: var(--color-info);
+  background: var(--color-info-bg);
+}
+
+.worklist-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  padding: 5px 8px;
+  color: var(--color-text-secondary);
+  background: var(--color-background);
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.worklist-assignee {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  line-height: 1.5;
+}
+
+.worklist-assignee svg {
+  flex-shrink: 0;
+  color: var(--color-teal);
+}
+
+.worklist-assignee span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.worklist-next-action {
+  overflow-wrap: anywhere;
+}
+
+.worklist-view-button {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.worklist-view-button:hover {
+  color: var(--color-teal);
+  background: var(--color-teal-light);
+}
+
+.worklist-empty {
+  padding: 45px 20px !important;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+
+/* LOADING AND ERROR STATES */
+
+.worklist-state {
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.worklist-state p {
+  font-size: 13px;
+}
+
+.worklist-error {
+  color: var(--color-danger);
+}
+
+.worklist-error button {
+  padding: 9px 16px;
+  color: white;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-md);
+}
+
+/* CASE DETAILS DRAWER */
+
+.case-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(17, 41, 82, 0.45);
+  backdrop-filter: blur(2px);
+}
+
+.case-details-drawer {
+  width: min(480px, 100%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  box-shadow: var(--shadow-lg);
+  animation: drawer-slide-in 250ms ease;
+}
+
+@keyframes drawer-slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.case-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.case-drawer-eyebrow {
+  color: var(--color-teal);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.case-drawer-header h2 {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.case-drawer-close {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  color: var(--color-text-secondary);
+  background: var(--color-background);
+  border: none;
+  border-radius: var(--radius-md);
+}
+
+.case-drawer-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.case-detail-section {
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.case-patient-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.case-patient-avatar {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  color: var(--color-primary);
+  background: var(--color-teal-light);
+  border-radius: 50%;
+}
+
+.case-patient-heading h3 {
+  font-size: 16px;
+}
+
+.case-patient-heading p {
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.case-status-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.case-section-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.case-section-title svg {
+  color: var(--color-teal);
+}
+
+.case-detail-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.case-detail-field:last-child {
+  margin-bottom: 0;
+}
+
+.case-detail-field span {
+  color: var(--color-text-muted);
+  font-size: 11px;
+}
+
+.case-detail-field strong {
+  color: var(--color-text-primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.case-detail-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px;
+  margin: 16px 0;
+  color: var(--color-info);
+  background: var(--color-info-bg);
+  border-radius: var(--radius-md);
+}
+
+.case-detail-notice svg {
+  flex-shrink: 0;
+}
+
+.case-detail-notice p {
+  color: inherit;
+  font-size: 10px;
+}
+
+.case-drawer-footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.case-drawer-secondary {
+  padding: 10px 18px;
+  color: var(--color-text-primary);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .worklist-filter-controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .worklist-search {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 900px) {
+  .worklist-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .worklist-page-heading h1 {
+    font-size: 24px;
+  }
+
+  .worklist-stats {
+    gap: 12px;
+  }
+
+  .worklist-stat-card {
+    padding: 15px;
+  }
+
+  .worklist-stat-value {
+    font-size: 25px;
+  }
+
+  .worklist-filters {
+    padding: 16px;
+  }
+
+  .worklist-filter-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .worklist-search {
+    grid-column: auto;
+  }
+
+  .worklist-filter-heading {
+    align-items: flex-start;
+  }
+
+  .worklist-table-heading {
+    padding: 16px;
+  }
+
+  .case-details-drawer {
+    width: 100%;
+  }
+
+  .case-drawer-header,
+  .case-drawer-content {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+.worklist-clickable-row {
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.worklist-clickable-row:hover {
+  background: #F0F8F8 !important;
+}
+
+.case-drawer-overlay {
+  overscroll-behavior: contain;
+}
+
+.case-details-drawer {
+  min-height: 0;
+  overscroll-behavior: contain;
+}
+
+.case-drawer-content {
+  min-height: 0;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* CASE OWNER ASSIGNMENT */
+
+.case-owner-assignment {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 16px;
+  margin: 16px 0;
+  background: #F5F9FA;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.case-owner-assignment label {
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.case-owner-assignment select {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  color: var(--color-text-primary);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.case-owner-assignment select:focus {
+  border-color: var(--color-teal);
+  box-shadow: 0 0 0 3px rgba(23, 159, 162, 0.10);
+}
+
+.case-owner-confirm {
+  width: 100%;
+  min-height: 40px;
+  padding: 10px 14px;
+  color: var(--color-white);
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 150ms ease, opacity 150ms ease;
+}
+
+.case-owner-confirm:hover:not(:disabled) {
+  background: var(--color-teal);
+}
+
+.case-owner-confirm:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.case-owner-confirm:focus-visible {
+  outline: 3px solid rgba(23, 159, 162, 0.25);
+  outline-offset: 2px;
+}
+
+
+/* STAFF-ASSISTED PATIENT RESPONSE ACTION */
+
+.case-assisted-response-button {
+  width: 100%;
+  min-height: 46px;
+  margin: 16px 0;
+  padding: 11px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid #179FA2;
+  border-radius: 9px;
+  background: #E6F5F4;
+  color: #087C78;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 150ms ease;
+}
+
+.case-assisted-response-button:hover {
+  background: #D3EEEC;
+}
+
+.case-assisted-response-button:focus-visible {
+  outline: 3px solid rgba(23, 159, 162, 0.3);
+  outline-offset: 3px;
+}
+
+/* URGENT SPECIALTY ROUTING */
+
+.case-routing-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  margin: 16px 0;
+  background: #F5F9FA;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.case-routing-panel h3 {
+  font-size: 13px;
+  color: var(--color-text-primary);
+}
+
+.case-routing-panel p {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.case-routing-panel label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.case-routing-panel select {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.case-routing-panel button {
+  width: 100%;
+  min-height: 40px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.case-routing-panel button:hover:not(:disabled) {
+  background: var(--color-teal);
+}
+
+.case-routing-panel button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+
+
+/* =========================================
+   JUSR AI — CASE CLOSURE EVIDENCE & VALIDATION
+========================================= */
+
+/* Evidence checklist container */
+
+.case-detail-section > .case-closure-evidence:last-of-type {
+  margin-top: 18px;
+}
+
+.case-closure-evidence {
+  padding: 16px;
+  background: #F8FAFC;
+  border: 1px solid #E5EAF0;
+  border-radius: 12px;
+}
+
+.case-closure-evidence > strong {
+  display: block;
+  margin-bottom: 13px;
+  color: #26364A;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+/* Checklist rows */
+
+.case-closure-evidence ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case-closure-evidence li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  background: #FFFFFF;
+  border: 1px solid #E8EDF2;
+  border-radius: 9px;
+}
+
+.case-closure-evidence li > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.case-closure-evidence li strong {
+  display: block;
+  color: #344256;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: none;
+}
+
+.case-closure-evidence li p {
+  margin-top: 5px;
+  color: #718096;
+  font-size: 10px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Evidence status badges */
+
+.closure-evidence-available,
+.closure-evidence-missing {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.closure-evidence-available {
+  color: #087A3D;
+  background: #E7F6ED;
+}
+
+.closure-evidence-missing {
+  color: #B42318;
+  background: #FEF0EF;
+}
+
+/* Empty checklist message */
+
+.case-closure-evidence > p {
+  margin: 0;
+  padding: 11px 12px;
+  color: #64748B;
+  background: #FFFFFF;
+  border: 1px solid #E8EDF2;
+  border-radius: 8px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* Consolidated closure validation */
+
+.case-closure-validation {
+  margin-top: 12px;
+  padding: 14px 15px;
+  color: #8F2929;
+  background: #FFF5F4;
+  border: 1px solid #F4D1CE;
+  border-left: 3px solid #D95C54;
+  border-radius: 9px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.case-closure-validation strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #A52D2D;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.case-closure-validation ul {
+  margin: 5px 0 0;
+  padding-left: 17px;
+}
+
+.case-closure-validation li {
+  margin-top: 3px;
+}
+
+/* Close Case action */
+
+.case-drawer-footer {
+  gap: 10px;
+  align-items: center;
+}
+
+.case-close-button {
+  min-width: 125px;
+  min-height: 42px;
+  padding: 11px 20px;
+  margin-top: 10px;
+  color: #FFFFFF;
+  background: #179FA2;
+  border: 1px solid #179FA2;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 150ms ease, box-shadow 150ms ease;
+}
+
+.case-close-button:hover:not(:disabled) {
+  background: #12888B;
+  border-color: #12888B;
+  box-shadow: 0 3px 10px rgba(23, 159, 162, 0.22);
+}
+
+.case-close-button:focus-visible {
+  outline: 3px solid rgba(23, 159, 162, 0.25);
+  outline-offset: 3px;
+}
+
+.case-close-button:disabled {
+  color: #8B95A5;
+  background: #E8EBEF;
+  border-color: #DDE2E8;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* Closure form fields */
+
+.case-detail-section #closure-type,
+.case-detail-section #closure-reason,
+.case-detail-section #closure-second-approver {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  color: #243247;
+  background: #FFFFFF;
+  border: 1px solid #DCE3EA;
+  border-radius: 9px;
+  outline: none;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.case-detail-section #closure-type,
+.case-detail-section #closure-second-approver {
+  min-height: 44px;
+}
+
+.case-detail-section #closure-reason {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.case-detail-section #closure-type:focus,
+.case-detail-section #closure-reason:focus,
+.case-detail-section #closure-second-approver:focus {
+  border-color: #179FA2;
+  box-shadow: 0 0 0 3px rgba(23, 159, 162, 0.12);
+}
+
+.case-detail-section .case-detail-field label {
+  display: block;
+  margin-bottom: 3px;
+  color: #526174;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Responsive closure layout */
+
+@media (max-width: 600px) {
+  .case-closure-evidence {
+    padding: 13px;
+  }
+
+  .case-closure-evidence li {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .case-close-button {
+    min-width: 110px;
+    padding: 10px 14px;
+  }
+}
+
+
+/* =========================================
+   CASE CLOSURE — FORM FIELD STYLING
+========================================= */
+
+.case-detail-section #closure-type,
+.case-detail-section #closure-reason,
+.case-detail-section #closure-second-approver {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  color: var(--color-text-primary);
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  outline: none;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.case-detail-section #closure-type,
+.case-detail-section #closure-second-approver {
+  min-height: 46px;
+  cursor: pointer;
+}
+
+.case-detail-section #closure-reason {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.case-detail-section #closure-type:focus,
+.case-detail-section #closure-reason:focus,
+.case-detail-section #closure-second-approver:focus {
+  border-color: var(--color-teal);
+  box-shadow: 0 0 0 3px rgba(23, 159, 162, 0.12);
+}
+
+.case-detail-section #closure-reason::placeholder {
+  color: #94A3B8;
+  opacity: 1;
+}
+
+.case-detail-section .case-detail-field label {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--color-text-primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .case-detail-section #closure-type,
+  .case-detail-section #closure-reason,
+  .case-detail-section #closure-second-approver {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================
+   WORKLIST — RESPONSIVE MOBILE CARDS
+========================================= */
+
+/* Hidden on desktop */
+.worklist-mobile-cards {
+  display: none;
+}
+
+.worklist-desktop-table {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .worklist-desktop-table {
+    display: none;
+  }
+
+  .worklist-mobile-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .worklist-mobile-card {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 15px;
+    color: var(--color-text-primary);
+    background: #FFFFFF;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    text-align: left;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 150ms ease,
+                box-shadow 150ms ease;
+  }
+
+  .worklist-mobile-card:hover {
+    border-color: var(--color-teal);
+    box-shadow: 0 3px 12px rgba(15, 35, 65, 0.06);
+  }
+
+  .worklist-mobile-card:focus-visible {
+    outline: 3px solid rgba(23, 159, 162, 0.2);
+    outline-offset: 2px;
+  }
+
+  .worklist-mobile-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .worklist-mobile-card-top .worklist-patient {
+    min-width: 0;
+  }
+
+  .worklist-mobile-screening {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 14px;
+  }
+
+  .worklist-mobile-screening strong {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .worklist-mobile-screening span {
+    color: var(--color-text-secondary);
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .worklist-mobile-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 12px;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .worklist-mobile-details > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+  }
+
+  .worklist-mobile-details span {
+    color: var(--color-text-secondary);
+    font-size: 10px;
+  }
+
+  .worklist-mobile-details strong {
+    font-size: 11px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+
+  .worklist-mobile-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    padding-top: 11px;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-teal);
+    font-size: 11px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 380px) {
+  .worklist-mobile-cards {
+    padding: 8px;
+  }
+
+  .worklist-mobile-card {
+    padding: 12px;
+  }
+}
+
+
+/* =========================================
+   JUSR AI — R-55 CONTACT ATTEMPT STYLING
+========================================= */
+
+.case-closure-evidence {
+  margin-top: 16px;
+  padding: 16px;
+  background: #F7FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+}
+
+.case-closure-evidence > strong {
+  font-size: 13px;
+  margin-bottom: 12px;
+  letter-spacing: -0.1px;
+}
+
+.case-closure-evidence > p {
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  color: #526174;
+  background: #FFFFFF;
+  border: 1px solid #E8EDF2;
+  border-radius: 8px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* Contact attempt form controls */
+
+.case-closure-evidence #contact-route,
+.case-closure-evidence #contact-attempted-at,
+.case-closure-evidence #contact-outcome,
+.case-closure-evidence #contact-notes {
+  width: 100%;
+  min-width: 0;
+  min-height: 40px;
+  padding: 10px 12px;
+  color: #243247;
+  background: #FFFFFF;
+  border: 1px solid #DCE3EA;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+  font-size: 12px;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.case-closure-evidence #contact-notes {
+  min-height: 76px;
+  resize: vertical;
+}
+
+.case-closure-evidence #contact-route:focus,
+.case-closure-evidence #contact-attempted-at:focus,
+.case-closure-evidence #contact-outcome:focus,
+.case-closure-evidence #contact-notes:focus {
+  border-color: #179FA2;
+  box-shadow: 0 0 0 3px rgba(23, 159, 162, 0.10);
+}
+
+/* Form labels */
+
+.case-closure-evidence .case-detail-field label {
+  margin-bottom: 3px;
+  color: #526174;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Record attempt button */
+
+.case-closure-evidence button {
+  width: 100%;
+  min-height: 40px;
+  padding: 10px 14px;
+  color: #FFFFFF;
+  background: #087F82;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 150ms ease, opacity 150ms ease;
+}
+
+.case-closure-evidence button:hover:not(:disabled) {
+  background: #06696C;
+}
+
+.case-closure-evidence button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Recorded attempts heading */
+
+.case-closure-evidence > div > strong {
+  display: block;
+  margin: 16px 0 10px;
+  color: #334155;
+  font-size: 12px;
+}
+
+/* Individual recorded attempts */
+
+.case-closure-evidence li {
+  padding: 12px;
+  background: #FFFFFF;
+  border: 1px solid #E4EAF0;
+  border-radius: 9px;
+}
+
+.case-closure-evidence li strong {
+  color: #087F82;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.case-closure-evidence li p {
+  margin-top: 5px;
+  color: #64748B;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.case-closure-evidence li small {
+  display: block;
+  margin-top: 7px;
+  color: #64748B;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* Contact attempt validation */
+
+.case-closure-evidence .case-closure-validation {
+  margin: 10px 0;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 600px) {
+  .case-closure-evidence {
+    padding: 13px;
+  }
+
+  .case-closure-evidence #contact-route,
+  .case-closure-evidence #contact-attempted-at,
+  .case-closure-evidence #contact-outcome,
+  .case-closure-evidence #contact-notes {
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   WORKLIST — V6 TABS, SUMMARY & TABLE EXTRAS
+========================================= */
+
+.wl-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 14px 22px;
+  border-bottom: 1px solid var(--color-border);
+  background: #FBFCFD;
+}
+
+.wl-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 12px;
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.wl-tab:hover {
+  background: var(--color-background);
+}
+
+.wl-tab.is-active {
+  color: var(--color-primary);
+  background: var(--color-teal-light);
+  border-color: rgba(23, 159, 162, 0.25);
+}
+
+.wl-tab-count {
+  padding: 1px 7px;
+  color: var(--color-text-secondary);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.wl-patient-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.wl-patient-line strong {
+  display: block;
+  line-height: 1.4;
+}
+
+.wl-avatar {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  color: var(--color-primary);
+  background: var(--color-teal-light);
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.wl-mono {
+  font-family: monospace;
+}
+
+.wl-status-cell {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.wl-time-overdue {
+  color: var(--color-danger);
+}
+
+.wl-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 12px;
+  color: var(--color-text-secondary);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.wl-checkbox input {
+  accent-color: var(--color-teal);
+}
+
+.wl-stat-icon {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+}
+
+.wl-stat-neutral { color: var(--color-info); background: var(--color-info-bg); }
+.wl-stat-danger { color: var(--color-danger); background: var(--color-danger-bg); }
+.wl-stat-warning { color: #946313; background: var(--color-warning-bg); }
+.wl-stat-info { color: var(--color-teal); background: var(--color-teal-light); }
+
+@media (max-width: 1200px) {
+  .worklist-filter-controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .worklist-search {
+    grid-column: 1 / -1;
+  }
+}
+
+
